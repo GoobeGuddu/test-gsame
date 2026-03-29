@@ -20,14 +20,14 @@ function obstaclespawn(){
     let obs = {
         x: p.width,
         y : ground,
-        w: 40,
+        w: 20,
         h:60
     }
     obstacles.push(obs)
 }
 function jump(){
     if(player.y >= ground){
-        velocity = -15
+        velocity = -20
     }
 }
 function movement(){
@@ -52,7 +52,7 @@ p.draw = function(){
 }
      for(let i= 0;i<obstacles.length;i++){
         let obs = obstacles[i]
-        obs.x -= 5
+        obs.x -= 3
         p.fill(255)
         p.rect(obs.x, obs.y, obs.w, obs.h)
      }
